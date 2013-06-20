@@ -2,7 +2,7 @@
   "Provides reducers support for State Transducers"
   (:require [clojure.core.reducers :as r]))
 
-(defmacro defcurried
+(defmacro ^:private defcurried
   "Builds another arity of the fn that returns a fn awaiting the last param"
   [name doc args & body]
   (let [cargs (vec (butlast args))]
