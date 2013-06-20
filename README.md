@@ -31,6 +31,16 @@ for all functions.
 ;=> nil
 ```
 
+## Installation
+
+Transduce artifacts are [published on Clojars][2].
+
+To depend on this version with Lein, add the following to your `project.clj`:
+
+```clojure
+[transduce "0.1.0"]
+```
+
 ## License
 
 Copyright © 2013 Brandon Bloom
@@ -38,3 +48,4 @@ Copyright © 2013 Brandon Bloom
 Distributed under the Eclipse Public License, the same as Clojure.
 
 [1]: http://en.wikipedia.org/wiki/Finite_state_transducer
+[2]: https://clojars.org/transduce
