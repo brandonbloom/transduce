@@ -1,7 +1,0 @@
-(ns transduce.core-test
-  (:use clojure.test
-        transduce.core))
-
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
