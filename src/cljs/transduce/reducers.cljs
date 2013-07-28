@@ -1,9 +1,9 @@
 (ns transduce.reducers
   "Provides reducers support for State Transducers"
   (:require [clojure.core.reducers :as r])
-  (:require-macros [transduce.macros :as c]))
+  (:require-macros [transduce.macros :refer [defcurried]]))
 
-(c/defcurried map-state
+(defcurried map-state
   "Like map, but threads a state through the sequence of transformations.
   For each x in coll, f is applied to [state x] and should return [state' x'].
   The first invocation of f uses init as the state."
@@ -16,7 +16,7 @@
             (reset! state state*)
             (f1 acc x*)))))))
 
-(c/defcurried mapcat-state
+(defcurried mapcat-state
   "Like mapcat, but threads a state through the sequence of transformations.
   For each x in coll, f is applied to [state x] and should return [state' xs].
   The result is the concatenation of each returned xs."
@@ -31,7 +31,7 @@
               (reduce f1 acc xs)
               acc)))))))
 
-(c/defcurried each
+(defcurried each
   "Applies f to each item in coll, returns nil"
   [f coll]
   (reduce (fn [_ x] (f x) nil) nil coll))
