@@ -1,4 +1,4 @@
-(defproject transduce "0.1.1-SNAPSHOT"
+(defproject transduce "0.1.2-SNAPSHOT"
   :description "map-state, mapcat-state, etc for state transducers"
   :url "https://github.com/brandonbloom/transduce"
   :license {:name "Eclipse Public License"
