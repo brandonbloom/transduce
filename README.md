@@ -1,3 +1,5 @@
+**NOTE: This library is totally unrelated to Clojure 1.7's new tranducers**
+
 # transduce
 
 A Clojure library providing functions for threading a state accumulator through
